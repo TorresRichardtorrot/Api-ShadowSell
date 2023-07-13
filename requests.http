@@ -1,0 +1,114 @@
+###
+POST http://localhost:9000/shadowsell/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "name":"Torres Richard",
+    "email":"Root",
+    "clave":"Blaki525$",
+    "confirmaClave":"Blaki525$",
+    "activo": false,
+    "modo":false
+}
+
+###
+GET  http://localhost:9000/shadowsell/users HTTP/1.1
+Content-Type: application/json
+
+
+
+###
+GET http://localhost:9000/shadowsell/users/calosdrichar@gmail.com/T12334 HTTP/1.1
+
+###
+PUT http://localhost:9000/shadowsell/usersModoID/torresdrichar@gmail.com HTTP/1.1
+Content-Type: application/json
+{
+  modo:true
+}
+    
+
+
+###
+DELETE  http://localhost:9000/shadowsell/productos/ HTTP/1.1
+Content-Type: application/json
+
+###
+POST http://localhost:9000/shadowsell/Venta/
+Content-Type: application/json
+
+
+
+###
+
+POST http://localhost:9000/shadowsell/ventas HTTP/1.1
+Content-Type: application/json
+
+{
+  "fecha": "2023-06-12T12:00:00.000+00:00",
+  "email_id": "torresdrichar@gmail.com",
+  "total": 150.50,
+  "productos": [
+    {
+      "producto": "64922e5860ba999b012192aa",
+      "cantidad": 1,
+      "precioUnitario": 50.25
+    },
+    {
+      "producto": "6492302560ba999b012192b6",
+      "cantidad": 1,
+      "precioU": 50
+    }
+  ]
+}
+
+
+###
+GET  http://localhost:9000/shadowsell/ventas/torresdrichar@gmail.com HTTP/1.1
+Content-Type: application/json
+
+###
+POST http://localhost:9000/shadowsell/mensajes HTTP/1.1
+Content-Type: application/json
+
+{
+  "name":"richard22",
+  "email":"torres12@gmail.com",
+  "mensaje":"hola"
+}
+
+###
+ http://localhost:9000/shadowsell/mensajes HTTP/1.1
+
+
+
+ {
+  "img":"caracol",
+  "brand":"quien sabe",
+  "name":"sanvalentin",
+  "description":"colonia para enamorado",
+  "price":23432,
+  "category":"para hombres",
+
+ }
+
+
+
+###
+
+POST http://localhost:9000/shadowsell/crearOrden HTTP/1.1
+
+Content-Type: application/json
+{
+    "nombre": "caracol",
+    "precio": 20
+   
+}
+
+###
+POST http://localhost:9000/shadowsell/recuperarP HTTP/1.1
+
+Content-Type: application/json
+{
+    "email": "torresdrichar@gmail.com"
+}
